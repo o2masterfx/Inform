@@ -1,10 +1,12 @@
-package com.o2masterfx.inform;
+package com.o2masterfx.inform.ui.settings;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceFragmentCompat;
+
+import com.o2masterfx.inform.R;
 
 public class SettingsActivity extends AppCompatActivity {
 

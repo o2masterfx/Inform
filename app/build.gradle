@@ -11,7 +11,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String" , "UNSPLASH_ACCESS_KEY" , '"gjaaThDtUsbhJp3eV0XXxzJzDJ9TLa9XyM006q_1HMk"')
     }
 
     buildTypes {
@@ -19,6 +19,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        targetCompatibility = "8"
+        sourceCompatibility = "8"
     }
 
     dataBinding {
@@ -30,17 +35,23 @@ android {
     }
 }
 
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'androidx.preference:preference:1.1.0'
+    implementation 'androidx.preference:preference:1.1.1'
     testImplementation 'junit:junit:4.12'
 
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.2.0"
+
+    implementation 'com.google.dagger:dagger:2.24'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.24'
 
     implementation 'com.loopj.android:android-async-http:1.4.9'
 
@@ -62,5 +73,5 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.1.0'
 
-    implementation 'com.ethanhua:skeleton:1.1.2'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }
