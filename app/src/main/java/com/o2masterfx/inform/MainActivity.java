@@ -1,4 +1,4 @@
-package com.rizky92.inform;
+package com.o2masterfx.inform;
 
 import androidx.appcompat.app.AppCompatActivity;
 
